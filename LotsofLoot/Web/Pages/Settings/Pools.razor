@@ -20,24 +20,24 @@
             <MudExpansionPanel @bind-Expanded="poolsExpanded">
                 <TitleContent><PanelTitle Text="Loose loot pools" KeyPrefix="Pools.LooseLoot." /></TitleContent>
                 <ChildContent>
-                    <MudGrid>
-                        <ConfigMongoIdDictionary Key="Pools.LooseLoot.ChangeRelativeProbabilityInPool"
-                                                 Label="Relative probability in pool"
-                                                 Tooltip="Multiplies an item's relative probability inside the pool it already belongs to, making it more likely to be picked over the other items in that same pool"
-                                                 @bind-Value="configService.EditablePresetHolder.presetConfig.ChangeRelativeProbabilityInPool"
-                                                 OriginalValue="configService.LotsofLootPresetConfig.ChangeRelativeProbabilityInPool"
-                                                 DefaultValue="DefaultRelativeProbabilityInPool"/>
+                <MudGrid>
+                    <ConfigMongoIdDictionary Key="Pools.LooseLoot.ChangeRelativeProbabilityInPool"
+                                             Label="Relative probability in pool"
+                                             Tooltip="Multiplies an item's relative probability inside the pool it already belongs to, making it more likely to be picked over the other items in that same pool"
+                                             @bind-Value="configService.EditablePresetHolder.presetConfig.ChangeRelativeProbabilityInPool"
+                                             OriginalValue="configService.LotsofLootPresetConfig.ChangeRelativeProbabilityInPool"
+                                             DefaultValue="DefaultRelativeProbabilityInPool"/>
 
-                        <ConfigMongoIdDictionary Key="Pools.LooseLoot.ChangeProbabilityOfPool"
-                                                 Label="Probability of pool"
-                                                 Tooltip="Multiplies the chance that the spawnpoint pool containing this item is rolled at all"
-                                                 @bind-Value="configService.EditablePresetHolder.presetConfig.ChangeProbabilityOfPool"
-                                                 OriginalValue="configService.LotsofLootPresetConfig.ChangeProbabilityOfPool"
-                                                 DefaultValue="DefaultProbabilityOfPool"/>
+                    <ConfigMongoIdDictionary Key="Pools.LooseLoot.ChangeProbabilityOfPool"
+                                             Label="Probability of pool"
+                                             Tooltip="Multiplies the chance that the spawnpoint pool containing this item is rolled at all"
+                                             @bind-Value="configService.EditablePresetHolder.presetConfig.ChangeProbabilityOfPool"
+                                             OriginalValue="configService.LotsofLootPresetConfig.ChangeProbabilityOfPool"
+                                             DefaultValue="DefaultProbabilityOfPool"/>
 
-                        <NormalizedLoot BindConfig="configService.EditablePresetHolder.presetConfig.NormalizedLooseLootConfig"
-                                        OriginalConfig="configService.LotsofLootPresetConfig.NormalizedLooseLootConfig"/>
-                    </MudGrid>
+                    <NormalizedLoot BindConfig="configService.EditablePresetHolder.presetConfig.NormalizedLooseLootConfig"
+                                    OriginalConfig="configService.LotsofLootPresetConfig.NormalizedLooseLootConfig"/>
+                </MudGrid>
                 </ChildContent>
             </MudExpansionPanel>
 
